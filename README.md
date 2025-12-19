@@ -14,7 +14,7 @@ No configuration drift.
 > GitHub → Argo CD → Kubernetes  
 > Docker images are pulled from Docker Hub at runtime.
 
-<img width="1200" height="800" alt="image" src="https://github.com/user-attachments/assets/6c51d6c9-aeeb-46d0-bb2c-e337a6338851" />
+<img width="1200" height="800" alt="image" src="https://github.com/user-attachments/assets/78e45d68-e491-40c4-826e-3a541277794b" />
 
 
 ---
