@@ -81,6 +81,3 @@ Senior DevOps / Cloud Engineer
 GitOps • Kubernetes • Platform Engineering
 
 ⸻
-	•	Align this README with specific job roles (Platform / SRE / DevOps)
-
-This version is fast to read, visually clear, and interview-ready.
