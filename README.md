@@ -9,7 +9,7 @@ No configuration drift.
 
 ---
 
-## 🧭 Architecture Overview
+## Architecture Overview
 
 > GitHub → Argo CD → Kubernetes  
 > Docker images are pulled from Docker Hub at runtime.
@@ -19,7 +19,7 @@ No configuration drift.
 
 ---
 
-## ⚙️ What This Repo Does
+## What This Repo Does
 
 - Manages Kubernetes applications declaratively
 - Uses Argo CD for continuous reconciliation
@@ -32,7 +32,7 @@ This is a working GitOps platform.
 
 ---
 
-## 🔁 GitOps Flow (High Level)
+##  GitOps Flow (High Level)
 
 Code Change → GitHub → Argo CD → Kubernetes
 ↑
@@ -76,7 +76,7 @@ http://portfolio.192.168.1.70.nip.io
 
 ---
 
-## 🧠 What This Demonstrates
+##  What This Demonstrates
 
 - Real GitOps behavior (not manual deployments)
 - Clear separation of CI and CD
@@ -88,7 +88,7 @@ This setup reflects how modern platform teams operate.
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - Kubernetes (K3s)
 - Argo CD
@@ -99,7 +99,7 @@ This setup reflects how modern platform teams operate.
 
 ---
 
-## 👤 Author
+##  Author
 
 **Sanjay Kumar Khambam**  
 Senior DevOps / Cloud Engineer  
