@@ -14,9 +14,8 @@ No configuration drift.
 > GitHub → Argo CD → Kubernetes  
 > Docker images are pulled from Docker Hub at runtime.
 
-![GitOps Architecture](./docs/gitops-architecture.png)
+<img width="1200" height="800" alt="image" src="https://github.com/user-attachments/assets/6c51d6c9-aeeb-46d0-bb2c-e337a6338851" />
 
-_(Sketch-style diagram showing GitHub, Argo CD, Docker Hub, and Kubernetes reconciliation flow)_
 
 ---
 
@@ -78,6 +77,7 @@ Each application is:
 - Exposed via Traefik ingress
 
 🌐 **Access URL**  
+
 http://portfolio.192.168.1.70.nip.io
 
 ---
@@ -116,7 +116,7 @@ GitOps • Kubernetes • Platform Engineering
 
 ## 📌 Notes
 
-This repository is part of an ongoing homelab platform used to:
+This repository is part of my ongoing homelab platform used to:
 - Experiment with GitOps patterns
 - Validate production-grade workflows
 - Showcase real-world Kubernetes operations
