@@ -1,83 +1,123 @@
-🏠 Homelab GitOps Platform (Kubernetes + Argo CD)
+# 🏠 Homelab GitOps Platform (Kubernetes + Argo CD)
 
-A hands-on GitOps implementation running on a self-hosted Kubernetes homelab using Argo CD.
-This repository is the single source of truth for everything deployed to the cluster.
+A hands-on **GitOps implementation** running on a self-hosted Kubernetes homelab using **Argo CD**.  
+This repository is the **single source of truth** for everything deployed to the cluster.
 
-All changes flow through Git.
-No manual kubectl apply. No drift.
+All changes flow through Git.  
+No manual `kubectl apply`.  
+No configuration drift.
 
-⸻
+---
 
-⚙️ What This Repo Does
-	•	Manages Kubernetes apps declaratively
-	•	Uses Argo CD for continuous reconciliation
-	•	Automatically rolls out changes when Git updates
-	•	Exposes apps using Traefik + nip.io
-	•	Mirrors real production GitOps workflows
+## 🧭 Architecture Overview
 
-⸻
+> GitHub → Argo CD → Kubernetes  
+> Docker images are pulled from Docker Hub at runtime.
 
-🔁 GitOps Flow (High Level)
+![GitOps Architecture](./docs/gitops-architecture.png)
+
+_(Sketch-style diagram showing GitHub, Argo CD, Docker Hub, and Kubernetes reconciliation flow)_
+
+---
+
+## ⚙️ What This Repo Does
+
+- Manages Kubernetes applications declaratively
+- Uses Argo CD for continuous reconciliation
+- Automatically rolls out changes when Git updates
+- Exposes apps using Traefik + nip.io
+- Mirrors real production GitOps workflows
+
+This is not a demo script.  
+This is a working GitOps platform.
+
+---
+
+## 🔁 GitOps Flow (High Level)
 
 Code Change → GitHub → Argo CD → Kubernetes
-                     ↑
-                Docker Hub
+↑
+Docker Hub
 
-	•	CI builds and pushes images to Docker Hub
-	•	CD pulls desired state from this repo
-	•	Argo CD keeps the cluster in sync with Git
+- CI builds and pushes images to Docker Hub
+- CD pulls desired state from this repository
+- Argo CD keeps the cluster in sync with Git
 
-⸻
+---
 
-📁 Repo Structure
+## 📁 Repository Structure
+- CI builds and pushes images to Docker Hub
+- CD pulls desired state from this repository
+- Argo CD keeps the cluster in sync with Git
+
+---
+
+## 📁 Repository Structure
 
 apps/
 └── portfolio/
-    ├── namespace.yaml
-    ├── deployment.yaml
-    ├── service.yaml
-    └── ingress.yaml
+├── namespace.yaml
+├── deployment.yaml
+├── service.yaml
+└── ingress.yaml
 
-Each app is isolated, declarative, and fully managed by Argo CD.
+Each application is:
+- Isolated by namespace
+- Fully declarative
+- Continuously reconciled by Argo CD
 
-⸻
+---
 
-🚀 Live Example
+## 🚀 Live Example
 
-Portfolio App
-	•	Namespace: portfolio
-	•	Replicas controlled via Git
-	•	Auto rollout on manifest change
-	•	Accessible via Traefik ingress
+**Portfolio Application**
 
+- Namespace: `portfolio`
+- Replicas controlled via Git
+- Automatic rollout on manifest change
+- Exposed via Traefik ingress
+
+🌐 **Access URL**  
 http://portfolio.192.168.1.70.nip.io
 
+---
 
-⸻
+## 🧠 What This Demonstrates
 
-🧠 What This Shows
-	•	Real GitOps behavior (not demo scripts)
-	•	Clear CI vs CD separation
-	•	Kubernetes reconciliation in action
-	•	Argo CD health, sync, and drift handling
-	•	Production-style repo layout
+- Real GitOps behavior (not manual deployments)
+- Clear separation of CI and CD
+- Kubernetes reconciliation in action
+- Argo CD health, sync, and drift handling
+- Production-style repository layout
 
-⸻
+This setup reflects how modern platform teams operate.
 
-🛠 Tech Stack
-	•	Kubernetes (K3s)
-	•	Argo CD
-	•	GitHub
-	•	Docker Hub
-	•	Traefik Ingress
-	•	nip.io DNS
+---
 
-⸻
+## 🛠 Tech Stack
 
-👤 Author
+- Kubernetes (K3s)
+- Argo CD
+- GitHub
+- Docker Hub
+- Traefik Ingress
+- nip.io DNS
 
-Sanjay Kumar Khambam
-Senior DevOps / Cloud Engineer
+---
+
+## 👤 Author
+
+**Sanjay Kumar Khambam**  
+Senior DevOps / Cloud Engineer  
+
 GitOps • Kubernetes • Platform Engineering
 
-⸻
+---
+
+## 📌 Notes
+
+This repository is part of an ongoing homelab platform used to:
+- Experiment with GitOps patterns
+- Validate production-grade workflows
+- Showcase real-world Kubernetes operations
+
