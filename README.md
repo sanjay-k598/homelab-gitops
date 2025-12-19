@@ -45,15 +45,9 @@ Docker Hub
 ---
 
 ## 📁 Repository Structure
-- CI builds and pushes images to Docker Hub
-- CD pulls desired state from this repository
-- Argo CD keeps the cluster in sync with Git
 
----
-
-## 📁 Repository Structure
-
-apps/
+homelab-gitops/
+└── apps/
 └── portfolio/
 ├── namespace.yaml
 ├── deployment.yaml
