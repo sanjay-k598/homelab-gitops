@@ -44,6 +44,19 @@ Docker Hub
 
 ---
 
+### Image Deployment Strategy
+
+This platform follows strict GitOps principles.
+
+- Docker images are built and tagged using immutable Git commit SHAs
+- Image updates are committed back to the GitOps repository
+- Argo CD deploys only when Git changes
+- Container registries do not trigger deployments directly
+
+This ensures full traceability, reproducibility, and safe rollbacks.
+
+---
+
 ## 📁 Repository Structure
 
 homelab-gitops/
