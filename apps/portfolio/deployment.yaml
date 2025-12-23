@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: portfolio
-          image: sanjaykhambam/sanjay-portfolio:b96932a
+          image: sanjaykhambam/sanjay-portfolio:e84f5c4
           imagePullPolicy: Always
           ports:
             - containerPort: 80
