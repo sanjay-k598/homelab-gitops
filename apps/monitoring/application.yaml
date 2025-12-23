@@ -16,6 +16,7 @@ spec:
       targetRevision: 61.7.0
       helm:
         releaseName: monitoring
+        skipCrds: false
         valueFiles:
           - $values/apps/monitoring/helm/values.yaml
 
