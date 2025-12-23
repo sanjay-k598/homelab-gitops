@@ -1,13 +1,13 @@
 grafana:
   enabled: true
-  adminPassword: "admin"   # I need to change later or move to secret
-  service:
-    type: ClusterIP
+  adminPassword: admin  # I need to change later or move to secret
+  defaultDashboardsEnabled: true
 
 prometheus:
+  enabled: true
   prometheusSpec:
+    retention: 7d
     serviceMonitorSelectorNilUsesHelmValues: false
-    podMonitorSelectorNilUsesHelmValues: false
 
 alertmanager:
   enabled: true
