@@ -5,26 +5,42 @@ metadata:
   namespace: argocd
 spec:
   project: default
+
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
 
-  sources:
-    # 1) Helm chart source
-    - repoURL: https://prometheus-community.github.io/helm-charts
-      chart: kube-prometheus-stack
-      targetRevision: 61.7.0
-      helm:
-        releaseName: monitoring
-        skipCrds: false
-        valueFiles:
-          - $values/apps/monitoring/helm/values.yaml
+  source:
+    repoURL: https://prometheus-community.github.io/helm-charts
+    chart: kube-prometheus-stack
+    targetRevision: 61.7.0
+    helm:
+      releaseName: monitoring
+      skipCrds: false
+      values: |
+        grafana:
+          enabled: true
+          adminPassword: admin
+          defaultDashboardsEnabled: true
 
-    # 2) Your Git repo source (values + ingress + namespace)
-    - repoURL: https://github.com/sanjay-k598/homelab-gitops.git
-      targetRevision: main
-      ref: values
-      path: apps/monitoring
+        prometheus:
+          enabled: true
+          prometheusSpec:
+            retention: 7d
+            serviceMonitorSelectorNilUsesHelmValues: false
+            replicas: 1
+            storageSpec:
+              volumeClaimTemplate:
+                spec:
+                  storageClassName: local-path
+                  accessModes:
+                    - ReadWriteOnce
+                  resources:
+                    requests:
+                      storage: 5Gi
+
+        alertmanager:
+          enabled: true
 
   syncPolicy:
     automated:
