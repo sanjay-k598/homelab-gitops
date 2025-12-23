@@ -1,6 +1,6 @@
 grafana:
   enabled: true
-  adminPassword: admin  # I need to change later or move to secret
+  adminPassword: admin  # change later or move to secret
   defaultDashboardsEnabled: true
 
 prometheus:
@@ -8,6 +8,18 @@ prometheus:
   prometheusSpec:
     retention: 7d
     serviceMonitorSelectorNilUsesHelmValues: false
+
+    replicas: 1
+
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: local-path
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 5Gi
 
 alertmanager:
   enabled: true
