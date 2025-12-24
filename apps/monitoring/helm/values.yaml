@@ -1,25 +1,35 @@
 grafana:
   enabled: true
-  adminPassword: admin  # change later or move to secret
+  adminPassword: admin
   defaultDashboardsEnabled: true
+  service:
+    type: ClusterIP
 
 prometheus:
   enabled: true
   prometheusSpec:
-    retention: 7d
-    serviceMonitorSelectorNilUsesHelmValues: false
-
     replicas: 1
+    retention: 7d
 
     storageSpec:
       volumeClaimTemplate:
         spec:
           storageClassName: local-path
-          accessModes:
-            - ReadWriteOnce
+          accessModes: ["ReadWriteOnce"]
           resources:
             requests:
-              storage: 5Gi
+              storage: 10Gi
+
+    serviceMonitorSelectorNilUsesHelmValues: false
 
 alertmanager:
   enabled: true
+  alertmanagerSpec:
+    storage:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: local-path
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 2Gi
