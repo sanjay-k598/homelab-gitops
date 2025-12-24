@@ -16,31 +16,13 @@ spec:
     targetRevision: 61.7.0
     helm:
       releaseName: monitoring
-      skipCrds: false
-      values: |
-        grafana:
-          enabled: true
-          adminPassword: admin
-          defaultDashboardsEnabled: true
+      valuesFiles:
+        - $values/apps/monitoring/helm/values.yaml
 
-        prometheus:
-          enabled: true
-          prometheusSpec:
-            retention: 7d
-            serviceMonitorSelectorNilUsesHelmValues: false
-            replicas: 1
-            storageSpec:
-              volumeClaimTemplate:
-                spec:
-                  storageClassName: local-path
-                  accessModes:
-                    - ReadWriteOnce
-                  resources:
-                    requests:
-                      storage: 5Gi
-
-        alertmanager:
-          enabled: true
+  sources:
+    - repoURL: https://github.com/sanjay-k598/homelab-gitops.git
+      targetRevision: main
+      ref: values
 
   syncPolicy:
     automated:
@@ -48,4 +30,3 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-      - ServerSideApply=true
