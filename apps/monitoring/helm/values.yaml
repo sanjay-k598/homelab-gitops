@@ -14,6 +14,14 @@ grafana:
       - ReadWriteOnce
     size: 5Gi
 
+  securityContext:
+    runAsUser: 472
+    runAsGroup: 472
+    fsGroup: 472
+
+  initChownData:
+    enabled: false
+
   service:
     type: ClusterIP
 
