@@ -2,9 +2,17 @@ grafana:
   enabled: true
 
   admin:
-    existingSecret: grafana-admin
+    existingSecret: grafana-admin-secret
     userKey: admin-user
     passwordKey: admin-password
+
+ persistence:
+   enabled: true
+   type: pvc
+   storageClassName: local-path
+   accessModes:
+     - ReafWriteOnce
+   size: 5Gi  
 
   defaultDashboardsEnabled: true
 
