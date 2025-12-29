@@ -32,7 +32,7 @@ prometheus:
   enabled: true
   prometheusSpec:
     retention: 7d
-
+    enableOTLPReceiver: false
     storageSpec:
       volumeClaimTemplate:
         spec:
