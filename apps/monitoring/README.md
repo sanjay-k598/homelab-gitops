@@ -30,8 +30,10 @@ This monitoring stack is deployed using the `kube-prometheus-stack` Helm chart a
 
 ---
 
+
 ## Screenshots
 
+---
 
 ## ArgoCD
 
@@ -59,7 +61,7 @@ This monitoring stack is deployed using the `kube-prometheus-stack` Helm chart a
 
 ## Prometheus
 
-### Prometheus Targets – All UP
+### Targets – All Healthy
 ![Prometheus Targets](screenshots/06-prometheus-targets-up.png)
 
 ---
