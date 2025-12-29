@@ -1,4 +1,4 @@
-# Kubernetes Monitoring with ArgoCD, Prometheus & Grafana
+# 📊 Kubernetes Monitoring with ArgoCD, Prometheus & Grafana
 
 This directory contains a production-style Kubernetes monitoring stack deployed using **GitOps principles** with ArgoCD.  
 The setup provides **cluster observability, persistent Grafana dashboards, and safe credential management**.
