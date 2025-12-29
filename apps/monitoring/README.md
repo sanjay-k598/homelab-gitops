@@ -46,6 +46,11 @@ All screenshots are taken from the **live cluster** and committed to this reposi
 
 [Open full-size image](screenshots/01-argocd-monitoring-health.png)
 
+### ArgoCD – Monitoring Application (Healthy & Synced)
+
+> Click the image to view full resolution
+
+[![ArgoCD Monitoring App](./screenshots/01-argocd-monitoring-healthy.png)](./screenshots/01-argocd-monitoring-healthy.png)
 ---
 
 ### ArgoCD Resource Tree
