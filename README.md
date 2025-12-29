@@ -57,16 +57,6 @@ This ensures full traceability, reproducibility, and safe rollbacks.
 
 ---
 
-## 📁 Repository Structure
-
-homelab-gitops/
-└── apps/
-└── portfolio/
-├── namespace.yaml
-├── deployment.yaml
-├── service.yaml
-└── ingress.yaml
-
 Each application is:
 - Isolated by namespace
 - Fully declarative
@@ -86,6 +76,8 @@ Each application is:
 🌐 **Access URL**  
 
 http://portfolio.192.168.1.70.nip.io
+
+https://sanjay-k598.github.io/
 
 ---
 
