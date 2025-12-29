@@ -41,3 +41,38 @@ apps/monitoring/
 │   └── grafana-ingress.yaml
 ├── namespace.yaml
 └── README.md
+
+```
+
+---
+
+## Persistence & Recovery 
+
+Grafana uses a PersistentVolumeClaim backed by the local-path storage class.
+Dashboards, users, and settings survive pod restarts.
+
+Tested by:
+- Deleting the Grafana pod
+- Verifying dashboards and data remained intact
+
+---
+
+## Secrets Handling
+
+Grafana admin credentials are stored in a Kubernetes Secret
+and injected via Helm values using existingSecret.
+
+Secrets are not hardcoded in Git.
+
+---
+
+## Screenshots
+
+	•	Grafana home dashboard
+	•	Node metrics dashboard
+	•	ArgoCD application in Healthy state
+
+---
+
+
+
