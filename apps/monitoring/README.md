@@ -31,41 +31,66 @@ This monitoring stack is deployed using the `kube-prometheus-stack` Helm chart a
 ---
 
 
-## Screenshots
+
+## 📸 Screenshots
+
+All screenshots are taken from the **live cluster** and committed to this repository for transparency.
 
 ---
 
 ## ArgoCD
 
 ### Monitoring Application – Healthy & Synced
-![ArgoCD Monitoring App Healthy](screenshots/01-argocd-monitoring-health.png)
+
+<img src="screenshots/01-argocd-monitoring-health.png" width="100%" />
+
+[Open full-size image](screenshots/01-argocd-monitoring-health.png)
 
 ---
 
 ### ArgoCD Resource Tree
-![ArgoCD Resource Tree](screenshots/02-argocd-monitoring-tree.png)
+
+<img src="screenshots/02-argocd-monitoring-tree.png" width="100%" />
+
+[Open full-size image](screenshots/02-argocd-monitoring-tree.png)
+
+---
+
+## Prometheus
+
+### Node Exporter Targets (UP)
+
+<img src="screenshots/03-nodeexporter.png" width="100%" />
+
+[Open full-size image](screenshots/03-nodeexporter.png)
+
+---
+
+### Prometheus Targets – Healthy
+
+<img src="screenshots/06-prometheus-targets-up.png" width="100%" />
+
+[Open full-size image](screenshots/06-prometheus-targets-up.png)
 
 ---
 
 ## Grafana
 
 ### Prometheus Datasource Connected
-![Grafana Prometheus Datasource](screenshots/04-grafana-datasource-prometheus.png)
+
+<img src="screenshots/04-grafana-datasource-prometheus.png" width="100%" />
+
+[Open full-size image](screenshots/04-grafana-datasource-prometheus.png)
 
 ---
 
 ### Kubernetes Cluster Dashboard
-![Grafana Kubernetes Dashboard](screenshots/05-grafana-dashboard-k8s-cluster.png)
+
+<img src="screenshots/05-grafana-dashboard-k8s-cluster.png" width="100%" />
+
+[Open full-size image](screenshots/05-grafana-dashboard-k8s-cluster.png)
 
 ---
-
-## Prometheus
-
-### Targets – All Healthy
-![Prometheus Targets](screenshots/06-prometheus-targets-up.png)
-
----
-
 ## Repository Structure
 
 ```text
