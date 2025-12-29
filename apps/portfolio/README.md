@@ -1,10 +1,10 @@
 ## 📁 Portfolio Application – GitOps Repository
 
-Overview
+## Overview
 
 This repository manages the deployment of my personal portfolio application using GitOps principles.
 
-The goal of this repo is not to store application source code, but to act as the single source of truth for Kubernetes deployment state, managed by ArgoCD.
+The goal of this repo is not to store application source code, but to act as the single source of truth for Kubernetes deployment state, managed by ArgoCD. Actual source code is here - https://github.com/sanjay-k598/sanjay-k598.github.io
 
 All changes to the portfolio infrastructure and Kubernetes resources are applied automatically through GitOps workflows.
 
