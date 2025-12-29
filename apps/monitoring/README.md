@@ -32,17 +32,34 @@ This monitoring stack is deployed using the `kube-prometheus-stack` Helm chart a
 
 ## Screenshots
 
-### ArgoCD
-| Monitoring app Healthy/Synced | Resource tree |
-|---|---|
-| ![ArgoCD Healthy](screenshots/01-argocd-monitoring-healthy.png) | ![ArgoCD Tree](screenshots/02-argocd-monitoring-tree.png) |
 
-### Grafana
-| Prometheus datasource test | Kubernetes dashboard |
-|---|---|
-| ![Grafana Datasource](screenshots/04-grafana-datasource-prometheus.png) | ![Grafana Dashboard](screenshots/05-grafana-dashboard-k8s-cluster.png) |
+## ArgoCD
 
-### Prometheus
+### Monitoring Application – Healthy & Synced
+![ArgoCD Monitoring App Healthy](screenshots/01-argocd-monitoring-health.png)
+
+---
+
+### ArgoCD Resource Tree
+![ArgoCD Resource Tree](screenshots/02-argocd-monitoring-tree.png)
+
+---
+
+## Grafana
+
+### Prometheus Datasource Connected
+![Grafana Prometheus Datasource](screenshots/04-grafana-datasource-prometheus.png)
+
+---
+
+### Kubernetes Cluster Dashboard
+![Grafana Kubernetes Dashboard](screenshots/05-grafana-dashboard-k8s-cluster.png)
+
+---
+
+## Prometheus
+
+### Prometheus Targets – All UP
 ![Prometheus Targets](screenshots/06-prometheus-targets-up.png)
 
 ---
