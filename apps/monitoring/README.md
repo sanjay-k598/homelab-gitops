@@ -75,4 +75,12 @@ Secrets are not hardcoded in Git.
 ---
 
 
+## Future Improvements 
+
+Planned improvements:
+- Application-level metrics via ServiceMonitor
+- Ingress metrics dashboards
+- Alerting rules for critical conditions
+- Loki for log aggregation
+
 
