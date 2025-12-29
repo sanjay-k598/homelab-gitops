@@ -113,7 +113,7 @@ GitOps • Kubernetes • Platform Engineering
 
 ---
 
-## 📌 Notes
+## Notes
 
 This repository is part of my ongoing homelab platform used to:
 - Experiment with GitOps patterns
